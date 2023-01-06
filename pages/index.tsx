@@ -16,7 +16,7 @@ export default function Home() {
       </Head>
       <main>
         <section className="bg-blue-700 min-h-screen">
-          <h1>Hello</h1>
+          <h1>Hello This Is My New portfolio</h1>
 
         </section>
       </main>
