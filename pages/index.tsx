@@ -19,7 +19,7 @@ import { useState } from "react"
 const inter = Inter({ subsets: ['latin'] })
 
 export default function Home() {
-  const [darkMode, setDarkMode] = useState(false)
+  const [darkMode, setDarkMode] = useState(true)
   return (
     <>
      <div className={darkMode ? "dark" : ""}>
@@ -29,31 +29,24 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <main className="bg-white p-10 md:px-20 lg:px-40 xl:px-80 dark:bg-gray-900">
+      <main className="bg-white p-10 md:px-20 lg:px-40 xl:px-80 dark:bg-slate-800">
         <section className="min-h-screen">
           <nav className="mb-12 flex justify-between">
             <h1 className="text-lg font-burtons">Will Dunwoody</h1>
             <ul className="flex items-center">
               <li>
-                <BsFillMoonStarsFill onClick={() => setDarkMode(!darkMode)} className="cursor-pointer text-md"/>
-              </li>
-              <li>
-                <a className="bg-gradient-to-r from-cyan-500 to-teal-500 text-white px-4 py-2 rounded-md ml-8" href="https://www.linkedin.com/in/willdunwoody/">Resume</a>
+                <BsFillMoonStarsFill onClick={() => setDarkMode(!darkMode)} className="text-blue-200 cursor-pointer text-md"/>
               </li>
             </ul>
           </nav>
 
-          <div className="text-center">
-            <h2 className="text-3xl py-2 text-teal-400 font-medium">Will Dunwoody</h2>
-            <h3 className="text-xl py-2 md:text-3xl">Developer</h3>
-            <p className="text-md py-5 leading-8 text-gray-800 md:text-xl max-w-lg mx-auto">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Fugit sit repellat error, eaque consectetur debitis animi ducimus, quae maxime eligendi iste voluptas itaque, adipisci magni aliquam repellendus explicabo sint culpa.</p>
+          <div>
+            <p className="text-cyan-200 py-1">Hi, my name is</p>
+            <h2 className="text-3xl py-1 text-gray-200 font-medium">Will Dunwoody.</h2>
+            <h2 className="text-2xl py-1 text-gray-400 md:text-3xl">I like to build and learn.</h2>
+            <p className="text-md py-5 text-gray-400 leading-2 md:text-xl max-w-lg mx-auto">I am a <span className="text-cyan-200">Full-Stack Developer</span> specializing in Ruby on Rails.</p>
           </div>
 
-          <div className="text-5xl flex justify-center gap-16 py-3 text-gray-600">
-            <a href="https://www.linkedin.com/in/willdunwoody/"><AiFillLinkedin /></a>
-            <a href="http://github.com/WillDunwoody"><AiFillGithub /></a>
-            <a href="https://twitter.com/WDunwood/"><AiFillTwitterCircle /></a>
-          </div>
 
           <div className="relative mx-auto w-60 my-10">
             <Image src={profilephoto} alt={"profile"} className="rounded-full"/>
@@ -117,6 +110,16 @@ export default function Home() {
             <div className="basis-1/3 flex-1"><Image src={web4} alt="" className="rounded-lg object-cover" /></div>
             <div className="basis-1/3 flex-1"><Image src={web5} alt="" className="rounded-lg object-cover" /></div>
             <div className="basis-1/3 flex-1"><Image src={web6} alt="" className="rounded-lg object-cover" /></div>
+          </div>
+        </section>
+        <section>
+          <div className="text-2xl flex justify-center gap-16 py-3 text-gray-500">
+            <a href="https://www.linkedin.com/in/willdunwoody/"><AiFillLinkedin /></a>
+            <a href="http://github.com/WillDunwoody"><AiFillGithub /></a>
+            <a href="https://twitter.com/WDunwood/"><AiFillTwitterCircle /></a>
+          </div>
+          <div className="text-center text-gray-500">
+            <p>Designed & built by <span className="text-cyan-200">Will Dunwoody</span></p>
           </div>
         </section>
       </main>
